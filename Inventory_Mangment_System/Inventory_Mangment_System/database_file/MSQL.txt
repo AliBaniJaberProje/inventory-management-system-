@@ -1,0 +1,119 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 10, 2020 at 06:08 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.29
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `api`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `id_product` int(11) NOT NULL,
+  `name_pro` varchar(20) NOT NULL,
+  `amount` varchar(20) NOT NULL,
+  `pricPerItem` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id_product`, `name_pro`, `amount`, `pricPerItem`) VALUES
+(28, 'product1', '0', '19'),
+(29, 'product1', '100', '19'),
+(30, 'product2', '100', '54'),
+(31, 'product3', '100', '24'),
+(32, 'product4', '100', '20'),
+(33, 'product5', '98', '22'),
+(34, 'product6', '110', '12'),
+(35, 'product7', '100', '6'),
+(36, 'product8', '100', '45'),
+(37, 'product9', '100', '6'),
+(38, 'product10', '100', '23'),
+(39, 'product11', '100', '24'),
+(40, 'product12', '100', '5'),
+(41, 'product10', '100', '13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `last_Access_time` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `last_Access_time`) VALUES
+(4, 'user1', 'aliai', 'ali_banijaber@stu.najah@edu', '2020-05-10 05:21:26'),
+(5, 'user2', 'zxcvbn', 'ali_banijaber@stu.najah@edu', '2020-05-10 05:56:57'),
+(6, 'user3', 'zxcvbn', 'ali_banijaber@stu.najah@edu', '2020-05-10 05:56:57'),
+(7, 'user4', 'zxcvbn', 'ali_banijaber@stu.najah@edu', '2020-05-10 05:56:57'),
+(8, 'user5', 'zxcvbn', 'ali_banijaber@stu.najah@edu', '2020-05-10 05:56:57'),
+(9, 'user6', 'zxcvbn', 'ali_banijaber@stu.najah@edu', '2020-05-10 05:56:57'),
+(10, 'user7', 'zxcvbn', 'ali_banijaber@stu.najah@edu', '2020-05-10 06:31:25');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`id_product`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `product`
+--
+ALTER TABLE `product`
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
